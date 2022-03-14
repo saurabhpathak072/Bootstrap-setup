@@ -54,8 +54,11 @@
                         <p>We take inspiration from the World's best cuisines, and create a unique fusion experience.
                             Our lipsmacking creations will tickle your culinary senses!</p>
                     </div>
-                    <div class="col-12 col-sm align-self-center">
+                    <div class="col-12 col-sm-3 align-self-center">
                         <img src="./img/logo.png" alt="logo" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-sm-3 align-self-center text-center">
+                        <a href="#reserve-table-form" class="btn btn-warning px-5">Reserve Table</a>
                     </div>
                 </div>
             </div>
@@ -84,19 +87,20 @@
 
 
             <div class="row row-content align-items-center">
-                <div class="col-14 col-sm-4 order-sm-last col-md-3">
+                <div class="col-14 col-sm-4 order-sm-first col-md-3">
                     <h3>This Month's Promotions</h3>
                 </div>
-                <div class="col col-sm order-sm-first col-md">
+                <div class="col col-sm order-sm-last col-md">
                     <div class="media">
-                        <img src="./img/buffet.png" alt="buffet" class="img-thumbnail mr-3 d-flex align-self-center">
+
                         <div class="media-body">
-                            <h2 class="mt-0">Weekend Grand Buffet</h2>
+                            <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger ">NEW</span> </h2>
                             <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing
                                 appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft
                                 drinks.
                                 All for just $19.99 per person </p>
                         </div>
+                        <img src="./img/buffet.png" alt="buffet" class="img-thumbnail mr-3 d-flex align-self-center">
                     </div>
 
                 </div>
@@ -122,6 +126,82 @@
                     </div>
                 </div>
             </div>
+
+            <div id="reserve-table-form" class="row justify-content-center my-4">
+                <div class="col-12 col-sm-9 ">
+                    <div class="card">
+                        <h3 class="card-header  bg-warning text-white">
+                            Reserve a Table
+                        </h3>
+                        <div class="card-body">
+                            <legend>
+                                <form>
+                                    <fieldset class="form-group">
+                                        <legend class="row align-items-center">
+                                            <div class="col-12 col-md-3">Number of Guests</div>
+                                            <div class="col col-md-8  offset-md-1 align-items-center">
+                                                <div class="row justify-content-center px-4">
+                                                    <div class="form-check col-4 col-md-2 align-items-center d-flex">
+                                                        <input class="form-check-input" type="radio" name="1" id="1"
+                                                            value="1" />
+                                                        <label for="1" class="form-check-label">1</label>
+                                                    </div>
+                                                    <div class="form-check col-4 col-md-2 align-items-center d-flex">
+                                                        <input class="form-check-input" type="radio" name="2" id="2"
+                                                            value="2" />
+                                                        <label for="2" class="form-check-label">2</label>
+                                                    </div>
+
+                                                    <div class="form-check col-4 col-md-2 align-items-center d-flex">
+                                                        <input class="form-check-input" type="radio" name="3" id="3"
+                                                            value="3" />
+                                                        <label for="3" class="form-check-label">2</label>
+                                                    </div>
+                                                    <div class="form-check col-4 col-md-2 align-items-center d-flex">
+                                                        <input class="form-check-input" type="radio" name="4" id="4"
+                                                            value="4" />
+                                                        <label for="4" class="form-check-label">4</label>
+                                                    </div>
+                                                    <div class="form-check col-4 col-md-2 align-items-center d-flex">
+                                                        <input class="form-check-input" type="radio" name="5" id="5"
+                                                            value="5" />
+                                                        <label for="5" class="form-check-label">5</label>
+                                                    </div>
+                                                    <div class="form-check col-4 col-md-2 align-items-center d-flex">
+                                                        <input class="form-check-input" type="radio" name="6" id="6"
+                                                            value="6" />
+                                                        <label for="6" class="form-check-label">6</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </legend>
+                                    </fieldset>
+                                    <div class="form-group ">
+                                        <div class="row align-items-center">
+                                            <label for="date" class="col-12 col-md-3 col-form-label">Date and
+                                                time</label>
+                                            <div class="col col-md-3 offset-md-1 ">
+                                                <input type="date" id="date" name="date" placeholder="date"
+                                                    class="form-control text-center p-0">
+                                            </div>
+                                            <div class="col col-md-3 offset-md-1  ">
+                                                <input type="time" id="time" name="time" placeholder="time"
+                                                    class="form-control text-center p-0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="offset-md-4 col-md-10">
+                                            <button type="submit" class="btn btn-primary">Send Feedback</button>
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         </div>
 
         <footer class="footer">
