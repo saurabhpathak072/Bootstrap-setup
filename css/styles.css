@@ -63,3 +63,10 @@ html {
   left: 0;
   min-height: 300px;
 }
+
+#caroselButtons {
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
