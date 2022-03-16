@@ -63,3 +63,9 @@ html {
   left: 0;
   min-height: 300px;
 }
+
+#caroselButtons {
+  left: 0;
+  position: absolute;
+  bottom: 0;
+}
