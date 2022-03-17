@@ -42,8 +42,11 @@
                                 Contact</a>
                         </li>
                     </ul>
-                    <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#loginModal">
+                    <span id="signin-button" class="navbar-text">
+                        <!-- <a data-toggle="modal" data-target="#loginModal">
+                            <span class="fa fa-sign-in"></span> Login
+                        </a> -->
+                        <a >
                             <span class="fa fa-sign-in"></span> Login
                         </a>
                     </span>
@@ -51,12 +54,13 @@
 
             </div>
         </nav>
-        <div id="loginModal" class="modal fade" role="dialog">
+        <div class="backdrop">
+        <div id="loginModal" class="modal  " role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header ">
                         <h4 class="modal-title">Login</h4>
-                        <button class="close" type="button" data-dismiss="modal">&times;</button>
+                        <button class="close" type="button" onclick="hideLoginmodal()">&times;</button>
                     </div>
                     <div class="modal-body">
                         <form>
@@ -81,7 +85,7 @@
                             </div>
                             <div class="form-row">
                                 <button type="button" class="btn btn-secondary btn-sm ml-auto"
-                                    data-dismiss="modal">Cancel</button>
+                                    id="signin-close">Cancel</button>
                                 <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
                             </div>
                         </form>
@@ -89,13 +93,15 @@
                 </div>
             </div>
         </div>
+        </div>
 
-        <div id="reserveTableModal" class="modal fade" role="dialog">
+         <div class="backdrop">
+        <div id="reserveTableModal" class="modal " role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">Reserve a Table</h4>
-                        <button class="close" type="button" data-dismiss="modal">&times;</button>
+                        <button class="close" type="button" onclick="hideReservationmodal()">&times;</button>
                     </div>
                     <div class="modal-body">
                         <form>
@@ -168,7 +174,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="offset-md-4 col-md-10">
-                                    <button type="button" data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                                    <button type="button" id="reservetable-close" class="btn btn-secondary">Cancel</button>
                                     <button type="submit" class="btn btn-primary">Reserve </button>
                                 </div>
                             </div>
@@ -177,6 +183,7 @@
                 </div>
             </div>
         </div>
+    </div>
         <header class="jumbotron">
             <div class="container">
                 <div class="row row-header">
@@ -196,7 +203,7 @@
                     </div> -->
                     <!-- Reserve Table Button with modal -->
                     <div class="col-12 col-sm-3 align-self-center text-center">
-                        <a data-toggle="modal" data-target="#reserveTableModal"
+                        <a id="reservetable-open"
                             class="btn btn-warning btn-block nav-link px-5">Reserve Table</a>
                     </div>
                 </div>
@@ -459,6 +466,12 @@
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script>
+            function  hideReservationmodal(){
+                    $('#reserveTableModal').hide();
+                }
+            function  hideLoginmodal(){
+                    $('#loginModal').hide();
+                }
             $(document).ready(function () {
                 $('#mycarousel').carousel({
                     interval: 2000
@@ -474,6 +487,29 @@
                         $('#caroselButtons').children('span').addClass('fa-pause')
                     }
                 });
+
+                $('#signin-button').click(function () {
+                    console.log('login');
+                    $('#loginModal').show();
+                    $('#loginModal').css("background","rgba(0,0,0,0.7)");
+                })
+                $('#reservetable-open').click(function () {
+                    console.log('login');
+                    $('#reserveTableModal').show();
+                    $('#reserveTableModal').css("background","rgba(0,0,0,0.7)");
+                })
+                $('#signin-close').click(function () {
+                   
+                    $('#loginModal').hide();
+                })
+                $('#reservetable-close').click(function () {
+                   
+                    $('#reserveTableModal').hide();
+                })
+
+                
+                
+
 
             })
         </script>
